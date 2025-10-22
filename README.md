@@ -151,7 +151,108 @@ ping elwing ke elrond (barat ke timur)
 
 ping maglor ke earendil (timur ke barat)
 
+<img width="1076" height="489" alt="image" src="https://github.com/user-attachments/assets/d1c78379-4161-4886-81ca-ec6d25ae3666" />
+
 resolver otomatis
+
 <img width="642" height="124" alt="image" src="https://github.com/user-attachments/assets/7b0e5e78-4670-467a-b132-dc6df43e8b14" />
+
+## Soal 4
+
+Para penjaga nama naik ke menara, di Tirion (ns1/master) bangun zona .com sebagai authoritative dengan SOA yang menunjuk ke ns1..com dan catatan NS untuk ns1..com dan ns2..com. Buat A record untuk ns1..com dan ns2..com yang mengarah ke alamat Tirion dan Valmar sesuai glosarium, serta A record apex .com yang mengarah ke alamat Sirion (front door), aktifkan notify dan allow-transfer ke Valmar, set forwarders ke 192.168.122.1. Di Valmar (ns2/slave) tarik zona .com dari Tirion dan pastikan menjawab authoritative. pada seluruh host non-router ubah urutan resolver menjadi IP dari ns1..com → ns2..com → 192.168.122.1. Verifikasi query ke apex dan hostname layanan dalam zona dijawab melalui ns1/ns2.
+
+### Script
+
+#### Tirion
+
+/etc/bind/named.conf.local 
+```
+zone "K11.com" {
+    type master;
+    file "/etc/bind/db.K11.com";
+    // Aktifkan notify dan allow-transfer ke Valmar
+    allow-transfer { 10.69.3.4; };
+    notify yes;
+};
+
+```
+
+/etc/bind/named.conf.options
+
+```
+options {
+    directory "/var/cache/bind";
+    
+    forwarders {
+        192.168.122.1;
+    };
+    
+    allow-query { any; };
+    
+    allow-recursion { any; };
+
+    auth-nxdomain no;
+    listen-on-v6 { none; };
+};
+```
+
+/etc/bind/db.K11.com
+
+```
+$TTL    604800
+@       IN      SOA     ns1.K11.com. root.ns1.K11.com. (
+                          2025101301 ; Serial (ubah jika ada update)
+                            604800     ; Refresh
+                             86400     ; Retry
+                           2419200     ; Expire
+                            604800 )   ; Negative Cache TTL
+;
+// Catatan NS
+@       IN      NS      ns1.K11.com.
+@       IN      NS      ns2.K11.com.
+
+; A record untuk ns1 dan ns2
+ns1     IN      A       10.69.3.3   // Mengarah ke Tirion
+ns2     IN      A       10.69.3.4   // Mengarah ke Valmar
+
+; A record apex (K11.com) mengarah ke Sirion (front door)
+@       IN      A       10.69.3.2
+
+; A record layanan lain
+sirion  IN      A       10.69.3.2
+lindon  IN      A       10.69.3.5
+vingilot IN     A       10.69.3.6
+```
+
+#### Valmar
+
+/etc/bind/named.conf.local
+
+```
+zone "K11.com" {
+    type slave;
+    masters { 10.69.3.3; };   // IP ns1 Tirion
+    file "/var/lib/bind/db.K11.com";
+};
+```
+
+/etc/resolv.conf
+
+```
+cat <<EOF > /etc/resolv.conf
+search K11.com
+nameserver 10.69.3.3
+nameserver 10.69.3.4
+nameserver 192.168.122.1
+EOF
+```
+
+![WhatsApp Image 2025-10-13 at 22 15 19_b14d04f9](https://github.com/user-attachments/assets/1cbbf2d2-e9b6-4a40-b903-3f0c9285d582)
+
+![WhatsApp Image 2025-10-13 at 22 24 14_be4be2ce](https://github.com/user-attachments/assets/d8730d4b-a34c-4e1b-9004-9046e28aeb4a)
+
+
+## Soal 5
+
 
 
