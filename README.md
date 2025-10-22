@@ -253,6 +253,26 @@ EOF
 
 
 ## Soal 5
+/etc/bind/db.K11.com
+
+#### Tirion
+```
+eonwe   IN      A       10.69.1.1
+earendil IN     A       10.69.1.2
+elwing  IN      A       10.69.1.3
+cirdan  IN      A       10.69.2.2
+elrond  IN      A       10.69.2.3
+maglor  IN      A       10.69.2.4
+sirion  IN      A       10.69.3.2
+lindon  IN      A       10.69.3.5
+vingilot IN     A       10.69.3.6
+```
+
+![WhatsApp Image 2025-10-20 at 16 58 45_4be9a482](https://github.com/user-attachments/assets/a0417ed7-781f-4a84-bff6-25ceec2a2182)
+
+![WhatsApp Image 2025-10-20 at 16 59 12_3bb08705](https://github.com/user-attachments/assets/a82e7700-7d2d-43f0-bbce-3b2a68c9096d)
+
+![WhatsApp Image 2025-10-20 at 16 59 43_d74507be](https://github.com/user-attachments/assets/7df88df7-d520-4b34-9967-4d45b7ccd43d)
 
 
-
+## Soal 6
