@@ -6,10 +6,10 @@ Di tepi Beleriand yang porak-poranda, Eonwe merentangkan tiga jalur: Barat untuk
 
 <img width="867" height="807" alt="image" src="https://github.com/user-attachments/assets/70a68147-a087-4cb8-9b34-32e32208db7d" />
 
-# Script
+### Script
 
+#### Eonwe
 ```
-#Eonwe
 # WAN (ke NAT)
 auto eth0
 iface eth0 inet dhcp
