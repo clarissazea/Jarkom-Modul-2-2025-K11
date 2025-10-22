@@ -314,3 +314,68 @@ DIG LOCAL HOST VALMAR
 CNAME Record
 <img width="981" height="676" alt="image" src="https://github.com/user-attachments/assets/40efd6b6-8cdf-442c-bf99-69430f9ef85e" />
 
+cirdan
+
+<img width="930" height="423" alt="image" src="https://github.com/user-attachments/assets/b0ed4ed3-6fd8-43fe-8077-bc8602fe3893" />
+
+<img width="672" height="273" alt="image" src="https://github.com/user-attachments/assets/665b3fd2-9943-44e6-b124-999ac51cc506" />
+
+## Soal 8
+
+<img width="1169" height="121" alt="image" src="https://github.com/user-attachments/assets/307ba280-534b-40c8-83ff-f591b9b6d7a5" />
+
+### tirion
+
+dig -x 10.69.3.2
+
+<img width="1182" height="642" alt="image" src="https://github.com/user-attachments/assets/db35596c-db52-42a7-9ebd-710b1617f2fb" />
+
+dig -x 10.69.3.3
+
+<img width="1129" height="662" alt="image" src="https://github.com/user-attachments/assets/592b957f-11a5-4b5e-a899-e0e5f1c17f4c" />
+
+
+dig -x 10.69.3.4
+
+<img width="1137" height="659" alt="image" src="https://github.com/user-attachments/assets/96f8d3e0-9ea8-4474-8e35-2a5d471362ae" />
+
+### valmar
+
+dig -x 10.69.3.2
+<img width="1121" height="653" alt="image" src="https://github.com/user-attachments/assets/ca291a77-5bf7-4663-9212-aebbf1331eb6" />
+
+
+
+dig -x 10.69.3.3
+<img width="1133" height="664" alt="image" src="https://github.com/user-attachments/assets/0495382f-2bb8-4f4a-8fcb-970b94880a0d" />
+
+
+
+dig -x 10.69.3.4
+<img width="1137" height="669" alt="image" src="https://github.com/user-attachments/assets/c2136f3c-97e2-43d6-b0a8-79c6d4034012" />
+
+## Soal 9 
+
+<img width="1121" height="146" alt="image" src="https://github.com/user-attachments/assets/6e4eb74e-6120-4682-9894-376f622ea457" />
+
+<img width="1017" height="943" alt="image" src="https://github.com/user-attachments/assets/bee8b9bd-ffd8-4798-9978-9a5cf7526018" />
+
+
+## Soal 10
+
+<img width="1080" height="271" alt="image" src="https://github.com/user-attachments/assets/70dadc3f-5a24-4c18-a7d7-8a113927c9e8" />
+
+<img width="900" height="135" alt="image" src="https://github.com/user-attachments/assets/5eaf57d3-6d19-4949-8179-4920ae75a4e5" />
+
+
+run
+
+<img width="1233" height="1046" alt="image" src="https://github.com/user-attachments/assets/588f1f91-42f3-448d-b981-3ec58941cf9f" />
+
+<img width="1335" height="1082" alt="image" src="https://github.com/user-attachments/assets/1c7ab2c6-7f79-4334-bf6a-fd01b09c527f" />
+
+
+curl
+
+<img width="896" height="199" alt="image" src="https://github.com/user-attachments/assets/4c032d33-8849-4652-b283-9a3fb2220fb4" />
+
