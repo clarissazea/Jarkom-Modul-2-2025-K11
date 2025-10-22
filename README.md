@@ -135,4 +135,23 @@ iface eth0 inet static
     gateway 10.69.3.1
 up echo nameserver 192.168.122.1 > /etc/resolv.conf
 ```
+## Soal 2
+
+<img width="1382" height="820" alt="image" src="https://github.com/user-attachments/assets/56e1ee84-47c8-4b3c-bef7-98966e44942c" />
+
+## Soal 3
+
+ping lindon ke sirion
+
+<img width="1005" height="440" alt="image" src="https://github.com/user-attachments/assets/c3df4254-6514-495c-b83d-6ac3ce4733d1" />
+
+ping elwing ke elrond (barat ke timur)
+
+<img width="1015" height="560" alt="image" src="https://github.com/user-attachments/assets/af966840-8420-4fdf-bee7-3ac939cd1622" />
+
+ping maglor ke earendil (timur ke barat)
+
+resolver otomatis
+<img width="642" height="124" alt="image" src="https://github.com/user-attachments/assets/7b0e5e78-4670-467a-b132-dc6df43e8b14" />
+
 
