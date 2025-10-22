@@ -224,6 +224,9 @@ lindon  IN      A       10.69.3.5
 vingilot IN     A       10.69.3.6
 ```
 
+service bind9 restart
+
+
 #### Valmar
 
 /etc/bind/named.conf.local
@@ -246,11 +249,21 @@ nameserver 10.69.3.4
 nameserver 192.168.122.1
 EOF
 ```
+service bind9 restart
+
 
 ![WhatsApp Image 2025-10-13 at 22 15 19_b14d04f9](https://github.com/user-attachments/assets/1cbbf2d2-e9b6-4a40-b903-3f0c9285d582)
 
 ![WhatsApp Image 2025-10-13 at 22 24 14_be4be2ce](https://github.com/user-attachments/assets/d8730d4b-a34c-4e1b-9004-9046e28aeb4a)
 
+NO 4 BARU
+
+TIRION
+<img width="1048" height="245" alt="image" src="https://github.com/user-attachments/assets/d352164c-23b0-4ac8-bf76-e362c07e9027" />
+
+VALMAR
+
+<img width="1123" height="289" alt="image" src="https://github.com/user-attachments/assets/db18131b-3ef8-4de1-9970-085e1c2519d4" />
 
 ## Soal 5
 /etc/bind/db.K11.com
