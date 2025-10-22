@@ -265,8 +265,16 @@ VALMAR
 
 <img width="1123" height="289" alt="image" src="https://github.com/user-attachments/assets/db18131b-3ef8-4de1-9970-085e1c2519d4" />
 
+
+ping earendil 
+
+<img width="1021" height="247" alt="image" src="https://github.com/user-attachments/assets/4a73a617-a6f3-4037-8bd7-dc5c03f212ba" />
+
+
+
 ## Soal 5
 /etc/bind/db.K11.com
+
 
 #### Tirion
 ```
@@ -281,6 +289,9 @@ lindon  IN      A       10.69.3.5
 vingilot IN     A       10.69.3.6
 ```
 
+<img width="1053" height="192" alt="image" src="https://github.com/user-attachments/assets/894b570c-55cd-437a-8895-8d91e66f9082" />
+
+
 ![WhatsApp Image 2025-10-20 at 16 58 45_4be9a482](https://github.com/user-attachments/assets/a0417ed7-781f-4a84-bff6-25ceec2a2182)
 
 ![WhatsApp Image 2025-10-20 at 16 59 12_3bb08705](https://github.com/user-attachments/assets/a82e7700-7d2d-43f0-bbce-3b2a68c9096d)
@@ -289,3 +300,17 @@ vingilot IN     A       10.69.3.6
 
 
 ## Soal 6
+
+NO 4 BARU YG DIG LOCAL HOST tirion
+<img width="1769" height="691" alt="image" src="https://github.com/user-attachments/assets/78d72f58-94b8-4fe5-b6d8-d71ee4a48c36" />
+
+
+DIG LOCAL HOST VALMAR
+
+<img width="1804" height="667" alt="image" src="https://github.com/user-attachments/assets/36dd497f-134e-4e0c-942c-421625f59a3d" />
+
+## Soal 7 
+
+CNAME Record
+<img width="981" height="676" alt="image" src="https://github.com/user-attachments/assets/40efd6b6-8cdf-442c-bf99-69430f9ef85e" />
+
