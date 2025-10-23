@@ -136,10 +136,13 @@ iface eth0 inet static
 up echo nameserver 192.168.122.1 > /etc/resolv.conf
 ```
 ## Soal 2
+Angin dari luar mulai berhembus ketika Eonwe membuka jalan ke awan NAT. Pastikan jalur WAN di router aktif dan NAT meneruskan trafik keluar bagi seluruh alamat internal sehingga host di dalam dapat mencapai layanan di luar menggunakan IP address.
 
 <img width="1382" height="820" alt="image" src="https://github.com/user-attachments/assets/56e1ee84-47c8-4b3c-bef7-98966e44942c" />
 
 ## Soal 3
+
+Kabar dari Barat menyapa Timur. Pastikan kelima klien dapat saling berkomunikasi lintas jalur (routing internal via Eonwe berfungsi), lalu pastikan setiap host non-router menambahkan resolver 192.168.122.1 saat interfacenya aktif agar akses paket dari internet tersedia sejak awal.
 
 ping lindon ke sirion
 
@@ -273,6 +276,8 @@ ping earendil
 
 
 ## Soal 5
+“Nama memberi arah,” kata Eonwe. Namai semua tokoh (hostname) sesuai glosarium, eonwe, earendil, elwing, cirdan, elrond, maglor, sirion, tirion, valmar, lindon, vingilot, dan verifikasi bahwa setiap host mengenali dan menggunakan hostname tersebut secara system-wide. Buat setiap domain untuk masing masing node sesuai dengan namanya (contoh: eru.<xxxx>.com) dan assign IP masing-masing juga. Lakukan pengecualian untuk node yang bertanggung jawab atas ns1 dan ns2
+
 /etc/bind/db.K11.com
 
 
@@ -301,6 +306,8 @@ vingilot IN     A       10.69.3.6
 
 ## Soal 6
 
+Lonceng Valmar berdentang mengikuti irama Tirion. Pastikan zone transfer berjalan, Pastikan Valmar (ns2) telah menerima salinan zona terbaru dari Tirion (ns1). Nilai serial SOA di keduanya harus sama
+
 NO 4 BARU YG DIG LOCAL HOST tirion
 <img width="1769" height="691" alt="image" src="https://github.com/user-attachments/assets/78d72f58-94b8-4fe5-b6d8-d71ee4a48c36" />
 
@@ -310,6 +317,12 @@ DIG LOCAL HOST VALMAR
 <img width="1804" height="667" alt="image" src="https://github.com/user-attachments/assets/36dd497f-134e-4e0c-942c-421625f59a3d" />
 
 ## Soal 7 
+
+Peta kota dan pelabuhan dilukis. Sirion sebagai gerbang, Lindon sebagai web statis, Vingilot sebagai web dinamis. Tambahkan pada zona .com A record untuk sirion..com (IP Sirion), lindon..com (IP Lindon), dan vingilot..com (IP Vingilot). Tetapkan CNAME :
+
+www.<xxxx>.com → sirion.<xxxx>.com,
+static.<xxxx>.com → lindon.<xxxx>.com, dan
+app.<xxxx>.com → vingilot.<xxxx>.com. Verifikasi dari dua klien berbeda bahwa seluruh hostname tersebut ter-resolve ke tujuan yang benar dan konsisten.
 
 CNAME Record
 <img width="981" height="676" alt="image" src="https://github.com/user-attachments/assets/40efd6b6-8cdf-442c-bf99-69430f9ef85e" />
@@ -321,6 +334,8 @@ cirdan
 <img width="672" height="273" alt="image" src="https://github.com/user-attachments/assets/665b3fd2-9943-44e6-b124-999ac51cc506" />
 
 ## Soal 8
+
+Setiap jejak harus bisa diikuti. Di Tirion (ns1) deklarasikan satu reverse zone untuk segmen DMZ tempat Sirion, Lindon, Vingilot berada. Di Valmar (ns2) tarik reverse zone tersebut sebagai slave, isi PTR untuk ketiga hostname itu agar pencarian balik IP address mengembalikan hostname yang benar, lalu pastikan query reverse untuk alamat Sirion, Lindon, Vingilot dijawab authoritative.
 
 <img width="1169" height="121" alt="image" src="https://github.com/user-attachments/assets/307ba280-534b-40c8-83ff-f591b9b6d7a5" />
 
@@ -356,12 +371,16 @@ dig -x 10.69.3.4
 
 ## Soal 9 
 
+Lampion Lindon dinyalakan. Jalankan web statis pada hostname static..com dan buka folder arsip /annals/ dengan autoindex (directory listing) sehingga isinya dapat ditelusuri. Akses harus dilakukan melalui hostname, bukan IP.
+
 <img width="1121" height="146" alt="image" src="https://github.com/user-attachments/assets/6e4eb74e-6120-4682-9894-376f622ea457" />
 
 <img width="1017" height="943" alt="image" src="https://github.com/user-attachments/assets/bee8b9bd-ffd8-4798-9978-9a5cf7526018" />
 
 
 ## Soal 10
+
+Vingilot mengisahkan cerita dinamis. Jalankan web dinamis (PHP-FPM) pada hostname app..com dengan beranda dan halaman about, serta terapkan rewrite sehingga /about berfungsi tanpa akhiran .php. Akses harus dilakukan melalui hostname.
 
 <img width="1080" height="271" alt="image" src="https://github.com/user-attachments/assets/70dadc3f-5a24-4c18-a7d7-8a113927c9e8" />
 
